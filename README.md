@@ -32,7 +32,7 @@ This prover allows all uppercase letters as variables.
 ### Formation Rules for Well-Formed Formulas (wff):
 - Every variable is a wff.
 - If $\phi$ is a wff, then **$\neg\phi$** is a wff.
-- If $\phi$ and $\psi$ are wffs, then **$(\phi\&\psi)$** is a wff.
+- If $\phi$ and $\psi$ are wffs, then **$(\phi$ & $\psi)$** is a wff.
 - If $\phi$ and $\psi$ are wffs, then **$(\phi\vee\psi)$** is a wff.
 - If $\phi$ and $\psi$ are wffs, then **$(\phi\to\psi)$** is a wff.
 - If $\phi$ and $\psi$ are wffs, then **$(\phi\leftrightarrow\psi)$** is a wff.
@@ -66,7 +66,9 @@ A sentence ψ is derivable from the sentences ϕ<sub>1</sub> ... ϕ<sub>n</sub> 
 
 The system used in this project is based on the [Suppes–Lemmon notation](https://en.wikipedia.org/wiki/Suppes%E2%80%93Lemmon_notation).
 
-<table border="1" cellpadding="6" cellspacing="0">
+![Inference Rules of Natural Deduction](docs/nd-rules.png)
+
+<!--<table border="1" cellpadding="6" cellspacing="0">
   <tr>
     <td colspan="2">
       <strong>1. Assumption Introduction</strong> - Any well-formed formula may be introduced as an assumption.<br>
@@ -83,7 +85,7 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <span style="display:inline-block; width:142px;"></span>( j )
       <span style="display:inline-block; width:47px;"></span>(ϕ&ψ)
       <span style="display:inline-block; width:60px;"></span>...<br>
-      <span style="display:inline-block; width:295px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-----------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>
       <span style="display:inline-block; width:141px;"></span>( k )
       <span style="display:inline-block; width:60px;"></span>ϕ
@@ -97,13 +99,13 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <strong>3. &-Introduction</strong><br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>
       <span style="display:inline-block; width:142px;"></span>( j )
-      <span style="display:inline-block; width:65px;"></span>ϕ
-      <span style="display:inline-block; width:80px;"></span>...<br>
+      <span style="display:inline-block; width:69px;"></span>ϕ
+      <span style="display:inline-block; width:85px;"></span>...<br>
       <span style="display:inline-block; width:20px;"></span>b<sub>1</sub> ... b<sub>n</sub>
       <span style="display:inline-block; width:138px;"></span>( k )
-      <span style="display:inline-block; width:63px;"></span>ψ
-      <span style="display:inline-block; width:80px;"></span>...<br>
-      <span style="display:inline-block; width:300px;"></span>...<br>
+      <span style="display:inline-block; width:67px;"></span>ψ
+      <span style="display:inline-block; width:83px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-------------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>, b<sub>1</sub> ... b<sub>n</sub>
       <span style="display:inline-block; width:90px;"></span>( l )
       <span style="display:inline-block; width:52px;"></span>(ϕ&ψ)
@@ -121,7 +123,7 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <span style="display:inline-block; width:140px;"></span>( k )
       <span style="display:inline-block; width:60px;"></span>ϕ
       <span style="display:inline-block; width:76px;"></span>...<br>
-      <span style="display:inline-block; width:297px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-----------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>, b<sub>1</sub> ... b<sub>n</sub>
       <span style="display:inline-block; width:90px;"></span>( l )
       <span style="display:inline-block; width:63px;"></span>ψ
@@ -132,12 +134,12 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <span style="display:inline-block; width:40px;"></span>j
       <span style="display:inline-block; width:165px;"></span>( j )
       <span style="display:inline-block; width:65px;"></span>ϕ
-      <span style="display:inline-block; width:80px;"></span>A<br>
+      <span style="display:inline-block; width:86px;"></span>A<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>, j
       <span style="display:inline-block; width:133px;"></span>( k )
       <span style="display:inline-block; width:63px;"></span>ψ
-      <span style="display:inline-block; width:80px;"></span>...<br>
-      <span style="display:inline-block; width:302px;"></span>...<br>
+      <span style="display:inline-block; width:83px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-------------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>
       <span style="display:inline-block; width:145px;"></span>( l )
       <span style="display:inline-block; width:52px;"></span>(ϕ➜ψ)
@@ -159,7 +161,7 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <span style="display:inline-block; width:147px;"></span>( l )
       <span style="display:inline-block; width:50px;"></span>(ψ➜ξ)
       <span style="display:inline-block; width:58px;"></span>...<br>
-      <span style="display:inline-block; width:300px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-----------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>, b<sub>1</sub> ... b<sub>n</sub>, c<sub>1</sub> ... c<sub>n</sub>
       <span style="display:inline-block; width:40px;"></span>( m )
       <span style="display:inline-block; width:60px;"></span>ξ
@@ -171,7 +173,7 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <span style="display:inline-block; width:144px;"></span>( j )
       <span style="display:inline-block; width:70px;"></span>ϕ
       <span style="display:inline-block; width:79px;"></span>...<br>
-      <span style="display:inline-block; width:305px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-------------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>
       <span style="display:inline-block; width:141px;"></span>( k )
       <span style="display:inline-block; width:57px;"></span>(ϕvψ)
@@ -189,7 +191,7 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <span style="display:inline-block; width:145px;"></span>( j )
       <span style="display:inline-block; width:53px;"></span>¬¬ϕ
       <span style="display:inline-block; width:63px;"></span>...<br>
-      <span style="display:inline-block; width:300px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-----------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>
       <span style="display:inline-block; width:145px;"></span>( k )
       <span style="display:inline-block; width:60px;"></span>ϕ
@@ -205,7 +207,7 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <span style="display:inline-block; width:133px;"></span>( k )
       <span style="display:inline-block; width:20px;"></span>(ψ&¬ψ) / (¬ψ&ψ)
       <span style="display:inline-block; width:25px;"></span>...<br>
-      <span style="display:inline-block; width:307px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-------------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>
       <span style="display:inline-block; width:144px;"></span>( l )
       <span style="display:inline-block; width:65px;"></span>¬ϕ
@@ -219,7 +221,7 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <span style="display:inline-block; width:145px;"></span>( j )
       <span style="display:inline-block; width:48px;"></span>(ϕ↔ψ)
       <span style="display:inline-block; width:60px;"></span>...<br>
-      <span style="display:inline-block; width:300px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-----------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>
       <span style="display:inline-block; width:145px;"></span>( k )
       <span style="display:inline-block; width:43px;"></span>(ϕ➜ψ)
@@ -239,14 +241,14 @@ The system used in this project is based on the [Suppes–Lemmon notation](https
       <span style="display:inline-block; width:138px;"></span>( k )
       <span style="display:inline-block; width:60px;"></span>(ψ➜ϕ)
       <span style="display:inline-block; width:60px;"></span>...<br>
-      <span style="display:inline-block; width:310px;"></span>...<br>
+      <span style="display:inline-block; width:15px;"></span>-------------------------------------------------------------------------<br>
       <span style="display:inline-block; width:20px;"></span>a<sub>1</sub> ... a<sub>n</sub>, b<sub>1</sub> ... b<sub>n</sub>
       <span style="display:inline-block; width:90px;"></span>( l )
       <span style="display:inline-block; width:60px;"></span>(ϕ↔ψ)
-      <span style="display:inline-block; width:50px;"></span>↔-E:j,k
+      <span style="display:inline-block; width:47px;"></span>↔-E:j,k
     </td>
   </tr>
-</table>
+</table>-->
 
 Note: The abbreviations used for the rules in the documentation and in the prover are based on the German terms: **B** (*Beseitigung* = Elimination) and **E** (*Einführung* = Introduction).
 
